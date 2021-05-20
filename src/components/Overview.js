@@ -10,10 +10,10 @@ class Overview extends Component {
       <div>
         <h2>Tasks list</h2>
         <ul>
-          {this.props.tasks.map((task, i) => {
+          {this.props.tasks.map((task) => {
             return (
               <div style={{ display: 'flex', margin: '6px 0' }}>
-                <li key={i} id={task.id}>
+                <li key={task.id} id={task.id}>
                   {task.number}. 
                   <input type="text" defaultValue={task.text} data-id={task.id} onChange={this.props.changeInput} readOnly={!task.editable ? 'readOnly' : null} />
                 </li>
